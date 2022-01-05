@@ -1,0 +1,318 @@
+:root {
+    --lightblue: rgb(121,203,205);
+    --lightgray:rgb(230,221,235);
+    --yellow:rgb(248,239,148);
+    --cayan:rgb(57,63,70);
+    --lightorange:rgb(215,179,88);
+    --sky:rgb(217,237,235);
+   
+}
+* {
+  box-sizing: border-box;
+}
+body { /*apply specific body attributes */
+  background-image: url('../../assets/images/background.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  cursor: -webkit-grab; cursor: grab; 
+   display: flex;
+    flex-direction: column;
+    line-height: 1.3;
+}
+
+  .mee{ /* using this class to apply specific attribute for 2 letter of my name*/
+      color:  var(--lightgray);
+      font-family: fantasy;
+  }
+  
+  
+  header {  /* header attributes*/
+    font-family: "Sofia", sans-serif;
+    background-color: black;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1%;
+    color: #fff;
+  }
+  h1{
+   font-size: 33px;
+
+  }
+  
+  nav ul {
+
+      font-size: 22px;
+      margin: 30px;
+    display: flex;
+    justify-content:space-between;
+    min-width: 300px;
+  }
+ 
+  ul li a{
+    display: inline-block;
+    color:whitesmoke;
+    display: block;
+  padding: 8px 25px;
+  color: #333;
+  text-decoration: none;
+  }
+  
+  nav a {padding:10px;
+    font-weight: bold;
+    text-decoration: none;
+  }
+  .dropdown{ 
+    position: relative;
+  display: inline-block;
+  color: white;
+
+  }
+.dropdown-menu{
+  font-family: serif;
+  color:black;
+
+  display: none;
+  position: absolute;
+  min-width: 160px;
+  box-shadow: 4px 8px 16px 4px var(--lightgray);
+  padding: 12px 16px;
+  z-index: 1;
+}
+.dropdown:hover .dropdown-menu{ /* show drop down menu when i hover the mouse up to portifiilio section*/
+  display: block;
+color:black;
+
+  
+}
+
+ul{
+  padding: 0;
+  list-style: none;
+  background: #f2f2f2;
+}
+ul li{
+  display: inline-block;
+  position: relative;
+  line-height: 21px;
+  text-align: left;
+}
+
+nav ul li:first-child [data-descr]{
+  position: relative;
+  display: inline-block;
+
+}
+/* small window contain Click me will appear after i hover the mouse up of About me section*/
+nav ul li:first-child [data-descr]:hover::after,
+ nav ul li:first-child [data-descr]:focus::after {
+  content: attr(data-descr);
+  font-family: serif;
+color:whitesmoke;
+  position: absolute;
+  right:40px;
+  min-width: 160px;
+  box-shadow: 4px 8px 16px 4px var(--lightgray);
+  padding: 20px 16px;
+  z-index: 1;
+ 
+}
+
+  
+/* change color of the nav bar sections when i hover it */
+ul li a:hover{
+color:var(--lightblue);
+  }
+  a:active {
+    color: var(--lightblue);
+  }
+  /*set position as a relative to change a position of the class which is inside div*/
+  div {
+    position: relative;}
+
+   .in{
+      position: absolute;
+
+  right: 10px; 
+
+
+  } 
+  /*main attributes*/
+  main {
+    display: flex;
+    flex-wrap: wrap;
+    flex-grow: 1;
+    color:whitesmoke;
+  }
+  
+  aside {
+    flex: 1;
+    padding: 80px;
+    text-align: left;
+  }
+  
+  
+  section {
+        flex: 6;
+        padding: 50px;
+        display: flex;
+        flex-direction: row;
+        position:relative;
+        flex-wrap:wrap;
+        justify-content:space-between;
+      }
+    
+/*set a vertical line between two sections*/
+       .vertical {
+            border-left: 1px solid var(--lightgray);
+            margin-top: 100px;
+            height:2800px; 
+
+    }
+  
+
+    /* set a specific attributes to horesion web site picture*/
+    section article:first-child{
+        padding-top: 50px;
+        font-size: 22px;
+        font-family: fantasy;
+        font-family: "Sofia", sans-serif;
+
+    }
+        /* set a specific attributes to pictures bellow horesion web site picture*/
+
+    main article:first-child, article:nth-of-type(2){
+        font-size: 24px;
+        font-weight: normal;
+        padding-top: 100px;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+    }
+     
+      .block{
+
+        box-sizing: border-box;
+        width: 1300px;
+        height: 230px;
+         border: 1px solid whitesmoke;
+         margin-top: 50px;
+
+        border-radius: 10%;
+        background-image: url('site2.png');
+        box-shadow: 5px 10px var(--lightgray);
+      }
+      pre{
+        position: absolute;
+        left:0px;
+        top:30px;
+        font-family: cursive;
+        padding-bottom: 120px;
+      }
+     .block:hover,.about:hover ,.contact-me:hover, .portofillio:hover{
+      color: var(--lightblue);
+     }
+
+.column {
+  float: left;
+  width: 33%;
+ 
+}
+.column1{
+  float:right;
+  width:30%;
+  margin-left: 1000px;
+}
+/*set the position for the small picture of portifiilio*/
+.dis{
+  position: absolute;
+  bottom: 550px;
+  /* bottom: 100px; */
+  left:10px;
+}
+.dis1{
+  position: absolute;
+  bottom: 550px;
+  /* bottom: 100px; */
+  left:600px;
+}
+.dist{
+  position: absolute;
+  left:30px;
+}
+
+.c :hover .image{
+  opacity: 0.4;
+  transform: scale(1.3);
+
+
+}
+/*form attributes */
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+input[type=submit] {
+  background-color: #04AA6D;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+/*use flex to display two section side by side which is appointment section with the image beside it*/
+.container {
+  display: flex;
+  flex-direction: row;
+  border-radius: 5px;
+  margin-top: 40px;
+  padding: 20px;
+}
+/*set width for the form section*/
+form{
+  flex:0 0 500px;
+}
+/*set width for image section which is beside form section*/
+.lastpic{
+  flex: 0 0 300px;
+  margin-left: 0px;
+  margin-top: 0px;
+}
+/*footer attributes*/
+footer{
+  background-color:var(--sky);
+padding-top: 30px;}
+address,h4{
+  text-align: center;
+}
+/*add icons before email and phone number*/
+a[href^="mailto"]::before {
+  content: "📧 ";
+  color: #45a049;
+}
+
+a[href^="tel"]::before {
+  content: "📞 ";
+}
+/*using clip Property to clip the image as a circle shape,we can use border-radious also,it will be the same result */
+.img1 {
+  clip-path: circle(33%);
+}
+
+
+
+      
+   
+ 
+ 
